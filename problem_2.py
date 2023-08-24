@@ -25,20 +25,25 @@ R2 = -2.712
 """
 
 
-def main():
- 
-    valor = float(input("Digite o valor: "))
+def main()
+  
+    a = float(input("Digite o valor A: "))
+    b = float(input("Digite o valor B: "))
+    c = float(input("Digite o valor C: "))
 
-    if valor >= 0 and valor <= 25:
-        print("Intervalo [0, 25]")
-    elif valor > 25 and valor <= 50:
-        print("Intervalo (25, 50]")
-    elif valor > 50 and valor <= 75:
-        print("Intervalo (50, 75]")
-    elif valor > 75 and valor <= 100:
-        print("Intervalo (75, 100]")
+    delta = b**2 - 4*a*c
+
+    if a == 0 or delta < 0:
+        print("Impossível calcular.")
     else:
-        print("Fora de intervalo.")
+        r1 = (-b + delta**0.5) / (2*a)
+        r2 = (-b - delta**0.5) / (2*a)
+        print(f"R1 = {r1:.3f}")
+        print(f"R2 = {r2:.3f}")
+     
+     
+     
+
 
 
 if __name__ == '__main__':
