@@ -1,51 +1,55 @@
+
 # -*- coding: utf-8 -*-
 
 # YOUR FULL NAME
 # UAG00098
-# Problem Set 2 - Problem 1
+# Problem Set 2 - Problem 3
 # Description:
 
 """
 Inputs, Processes and Output (IPO)
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 Input(s):
-Quatro números inteiros v1, v2, v3 e v4.
+Digite um número de ponto flutuante.
 Exemplo 1:
-Digite o valor A: 5
-Digite o valor B: 6
-Digite o valor C: 7
-Digite o valor D: 8
+Digite o valor: 25.01
 Exemplo 2:
-Digite o valor A: 2
-Digite o valor B: 3
-Digite o valor C: 2
-Digite o valor D: 6
+Digite o valor: 25.00
+Exemplo 3:
+Digite o valor: -25.02
 
 Processes:
-Leia 4 valores inteiros A, B, C e D. A seguir, se B for maior do que C e se D for maior do que A, e a soma de C com D for maior que a soma de A e B e se C e D, ambos, forem positivos e se a variável A for par escrever a mensagem "Valores aceitos.", senão escrever "Valores recusados.".
+Você deve fazer um programa que leia um valor qualquer e apresente uma mensagem dizendo em qual dos seguintes intervalos ([0, 25], (25, 50], (50, 75], (75, 100]) este valor se encontra. Obviamente se o valor não estiver em nenhum destes intervalos, deverá ser impressa a mensagem "Fora de intervalo.".
+
+O símbolo (representa "maior que". Por exemplo:
+[0, 25]  indica valores entre 0 e 25.0000, inclusive eles.
+(25, 50] indica valores maiores que 25 Ex: 25.00001 até o valor 50.0000000
 
 Output(s):
-Mostre a respectiva mensagem após a validação dos valores.
+A saída deve ser uma mensagem conforme exemplo abaixo.
 Exemplo 1:
-Valores recusados.
+Intervalo (25, 50]
 Exemplo 2:
-Valores aceitos.
-
-
+Intervalo [0, 25]
+Exemplo 3:
+Fora de intervalo.
 """
 
 
 def main():
-   a = int(input(f"Digite o valor A: "))
-   b = int(input(f"Digite o valor B: "))
-   c = int(input(f"Digite o valor C: "))
-   d = int(input(f"Digite o valor D: "))
+ 
+    valor = float(input("Digite o valor: "))
 
-   if b > c and d > a and (c + d) > (a + b) and c > 0 and d > 0 and a %2 == 0:
-     print("Valores aceitos.")
-   else:
-     print("Valores recusados.")
-
+    if valor >= 0 and valor <= 25:
+        print("Intervalo [0, 25]")
+    elif valor > 25 and valor <= 50:
+        print("Intervalo (25, 50]")
+    elif valor > 50 and valor <= 75:
+        print("Intervalo (50, 75]")
+    elif valor > 75 and valor <= 100:
+        print("Intervalo (75, 100]")
+    else:
+        print("Fora de intervalo.")
 
 if __name__ == '__main__':
     main()
