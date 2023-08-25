@@ -25,7 +25,8 @@ R2 = -2.712
 """
 
 
-def main()
+
+def main():
   
     a = float(input("Digite o valor A: "))
     b = float(input("Digite o valor B: "))
@@ -40,10 +41,6 @@ def main()
         r2 = (-b - delta**0.5) / (2*a)
         print(f"R1 = {r1:.3f}")
         print(f"R2 = {r2:.3f}")
-     
-     
-     
-
 
 
 if __name__ == '__main__':
